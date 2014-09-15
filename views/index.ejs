@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/docs.min.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body class="page-login">
+    <div class="row row-login">
+        <div class="box box-login">
+          <a class="logo" href="http://www.portalmb.com.br"> </a>
+          <form action="/login" method="POST" class="form-login">
+              Usuário:
+              <input type="text" name="username" class="form-control" value="<%= usuario %>" autofocus>
+              Senha:
+              <input type="password" name="password" class="form-control">
+              
+              <% if (message.length > 0) { %>
+                <div class="alert alert-danger"><%= message %></div>
+              <% } %>
+              <button type="submit" class="btn btn-primary btn-login btn-block">Acessar</button>
+          </form>
+        </div> 
+    </div>
+    <!--<a href="/files" class="btn btn-default">Visualizar arquivos</a> -->
+    <div class="footer">
+      <div class="container"> 
+        <div class="row"> 
+          <span>Todos os direitos reservados © 2013 · <a href="http://www.portalmb.com.br/">MB Solutions</a></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
